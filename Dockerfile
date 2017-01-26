@@ -1,6 +1,5 @@
-FROM docker/whalesay:latest
-RUN apt-get install -y fortunes
-RUN apt-get update
-RUN apt-get install -y wget 
-CMD /usr/games/fortune -a | cowsay
+FROM ubuntu
+MAINTAINER user@example.com 
+RUN apt-get update && apt-get install -y ruby ruby-dev
+RUN gem install sinatra
 
